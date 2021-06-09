@@ -6,5 +6,5 @@ type LogInCredentials = {
 }
 
 export interface IAuthentication {
-   auth({email, password}: LogInCredentials): Promise<AccountModel>; 
+   auth(credential: LogInCredentials): Promise<AccountModel>; 
 }
