@@ -1,6 +1,9 @@
-import { HttpPostClient } from '@/data/protocols/http/http-post-client';
+import { HttpPostClient } from '../../../data/protocols/http/http-post-client';
 import { EHttpStatusCode } from '../../../data/protocols/http/http-response';
 import { InvalidCredentialsError } from '../../../domain/errors/invalid-credentials-error';
+import { NotFoundError } from '../../../domain/errors/not-found-error';
+import { ServerError } from '../../../domain/errors/server-error';
+import { UnexpectedError } from '../../../domain/errors/unexpected-error';
 import { LogInCredentials } from '../../../domain/usecases/authentication';
 
 export class RemoteAuthentication {
@@ -16,8 +19,11 @@ export class RemoteAuthentication {
       })
 
       switch(httpResponse.statusCode){
+         case EHttpStatusCode.ok: break;
          case EHttpStatusCode.unauthorized: throw new InvalidCredentialsError()
-         default: return Promise.resolve()
+         case EHttpStatusCode.notFound: throw new NotFoundError()
+         case EHttpStatusCode.serverError: throw new ServerError()
+         default: throw new UnexpectedError()
       }
    }
 
