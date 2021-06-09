@@ -1,5 +1,4 @@
-import { HttpPostClient, HttpPostParams } from '../protocols/http/http-post-client';
-import { EHttpStatusCode, HttpResponse } from '../protocols/http/http-response';
+import { EHttpStatusCode, HttpPostClient, HttpPostParams, HttpResponse } from '../protocols/http';
 
 export class HttpPostClientSpy<T, R> implements HttpPostClient<T, R> {
    url?: string;

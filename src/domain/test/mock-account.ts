@@ -1,6 +1,6 @@
-import { LogInCredentials } from '@/domain/usecases/authentication';
+import { LogInCredentials } from '@/domain/usecases';
 import faker from 'faker';
-import { AccountModel } from '../models/account-model';
+import { AccountModel } from '../models';
 
 export const mockCredentials = (): LogInCredentials => ({
    email: faker.internet.email(),
