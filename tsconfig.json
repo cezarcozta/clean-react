@@ -17,6 +17,7 @@
      },
      "allowJs": true,
      "resolveJsonModule": true,
+     "noEmit": true,
    },
    "include": [
      "src"
