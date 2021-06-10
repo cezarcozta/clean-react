@@ -1,4 +1,5 @@
-import { LoginHeader } from "@/presentation/components/login-header/logo";
+import Footer from "@/presentation/components/footer/footer";
+import Header from "@/presentation/components/login-header/login-header";
 import { Spinner } from "@/presentation/components/spinner/spinner";
 import React from "react";
 import Styles from "./login-styles.scss";
@@ -6,7 +7,7 @@ import Styles from "./login-styles.scss";
 export function Login() {
   return (
     <div className={Styles.login}>
-      <LoginHeader />
+      <Header />
 
       <form className={Styles.form}>
         <h2>Login</h2>
@@ -34,7 +35,8 @@ export function Login() {
           <span className={Styles.error}>Erro</span>
         </div>
       </form>
-      <footer className={Styles.footer} />
+
+      <Footer />
     </div>
   );
 }

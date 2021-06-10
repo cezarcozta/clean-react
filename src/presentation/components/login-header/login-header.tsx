@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { Logo } from "../logo/logo";
 import Styles from "./login-header-styles.scss";
 
-export function LoginHeader() {
+function LoginHeader() {
   return (
     <header className={Styles.header}>
       <Logo />
@@ -10,3 +10,5 @@ export function LoginHeader() {
     </header>
   );
 }
+
+export default memo(LoginHeader);
