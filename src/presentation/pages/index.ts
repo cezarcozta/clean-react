@@ -1,1 +1,1 @@
-export { Login } from '@/presentation/pages/login/login';
+export { Login } from './login/login';
