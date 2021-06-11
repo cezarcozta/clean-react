@@ -1,12 +1,14 @@
 import { Spinner } from "@/presentation/components/spinner/spinner";
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../../../presentation/contexts/form/form-context";
 import Styles from "./form-status-styles.scss";
 
 export function FormStatus() {
+  const { isLoading, hasError } = useContext(Context);
   return (
-    <div className={Styles.errorWrap}>
-      <Spinner className={Styles.spinner} />
-      <span className={Styles.error}>Erro</span>
+    <div test-id="error-wrap" className={Styles.errorWrap}>
+      {isLoading && <Spinner className={Styles.spinner} />}
+      {hasError && <span className={Styles.error}>Erro</span>}
     </div>
   );
 }
