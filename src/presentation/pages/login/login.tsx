@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Footer,
   FormStatus,
   Input,
   LoginHeader,
@@ -30,7 +29,7 @@ export function Login() {
         <FormStatus />
       </form>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

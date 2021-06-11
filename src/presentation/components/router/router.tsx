@@ -1,6 +1,6 @@
-import { Login } from "@/presentation/pages";
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Login } from "../../../presentation/pages";
 
 export function Router() {
   return (
