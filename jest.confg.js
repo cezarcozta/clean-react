@@ -6,10 +6,11 @@ module.exports = {
    ],
    testEnvironment: 'jsdom',
    transform: {
-     '.+\\.(ts|tsx)$': 'babel-jest'
+    '+\\.js$': 'babel-jest',
+    '.+\\.(ts|tsx)$': 'ts-jest'
    },
    moduleNameMapper: {
      '@/(.*)': '<rootDir>/src/$1',
-      '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+      '\\.(css|scss)$': 'identity-obj-proxy'
    }
  }
