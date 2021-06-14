@@ -31,7 +31,12 @@ export function Login() {
 
           <Input type="password" name="password" placeholder="senha" />
 
-          <button className={Styles.submit} type="submit">
+          <button
+            data-testid="submit"
+            className={Styles.submit}
+            type="submit"
+            disabled
+          >
             Entrar
           </button>
 
