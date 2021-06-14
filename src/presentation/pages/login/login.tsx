@@ -27,9 +27,13 @@ export function Login() {
         <form className={Styles.form}>
           <h2>Login</h2>
 
-          <Input type="email" name="email" placeholder="e-mail" />
+          <Input type="email" name="email" placeholder="digite seu e-mail" />
 
-          <Input type="password" name="password" placeholder="senha" />
+          <Input
+            type="password"
+            name="password"
+            placeholder="digite sua senha"
+          />
 
           <button
             data-testid="submit"
